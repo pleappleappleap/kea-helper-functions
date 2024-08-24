@@ -1,5 +1,4 @@
-CREATE OR REPLACE PROCEDURE add_dhcp4_server(tag varchar(64),
-                                             description text)
+CREATE OR REPLACE PROCEDURE delete_dhcp4_server(tag varchar(64))
 LANGUAGE plpgsql
 AS $$
 DECLARE rightnow timestamp with time zone;
