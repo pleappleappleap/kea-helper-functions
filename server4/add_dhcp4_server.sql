@@ -3,7 +3,7 @@ CREATE OR REPLACE PROCEDURE add_dhcp4_server(tag varchar(64),
 LANGUAGE plpgsql
 AS $$
 DECLARE rightnow timestamp;
-BEGIN
+BEGIN;
   BEGIN TRANSACTION;
   SELECT NOW() INTO rightnow;
   CALL createauditrevisiondhcp4(rightnow, tag, 'Adding server ' || tag, 0);
