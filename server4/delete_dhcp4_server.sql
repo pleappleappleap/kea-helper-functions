@@ -5,5 +5,5 @@ DECLARE rightnow timestamp with time zone;
 BEGIN
   SELECT NOW() INTO rightnow;
   PERFORM createauditrevisiondhcp4(rightnow, tag, 'Removing server ' || tag, false);
-  DELETE FROM dhcp4_server WHERE dhcp4_server.tag = tag;
+  DELETE FROM dhcp4_server WHERE dhcp4_server.tag = delete_dhcp4_server.tag;
 END $$;
