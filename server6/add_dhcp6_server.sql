@@ -1,3 +1,12 @@
+/****************************************************************/
+/* add_dhcp6_server.sql						*/
+/****************************************************************/
+/* Copyright (c)2024 Sridhar Ayengar				*/
+/****************************************************************/
+/* https://github.com/pleappleappleap/kea-helper-functions	*/
+/****************************************************************/
+
+
 CREATE OR REPLACE PROCEDURE add_dhcp6_server(tag varchar(64),
                                              description text)
 LANGUAGE plpgsql
